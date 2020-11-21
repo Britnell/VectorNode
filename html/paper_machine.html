@@ -1,0 +1,43 @@
+
+<html>
+
+<head>
+    <title>Mechanical Drawing Machine</title>
+    		<meta charset="UTF-8">
+			<script type="text/javascript" src="/js/paper-full.js"></script>
+
+	<style>
+		
+		#papercanvas {
+			width: calc(100% - 0px);
+			height: calc(100vh - 0px);
+			padding: 0px;
+		}
+
+		#plack {
+			max-width: 800px;
+			margin-left: 10%;
+		}
+
+	</style>
+</head>
+
+<body>
+      
+	  <canvas id="papercanvas" resize ></canvas>
+	  <div id="plack">
+		  <p>This is a digital implementation of mechanical Drawing Machines. There is of course something magical about a static machine producing the images, but I love that this lets you rewind to chose the image you want.
+		  Mouse-click to finish drawing, then drag to wind-back. Vertical drag is more sensitive than Horizontal.
+		  Download .svg or right-click to save image. Hit SPACE to restart.</p>
+		  <input type="button" value="Download as SVG" id="export-button">
+	  </div>
+	  
+	  
+	  
+	  <script type="text/javascript" src="/js/paper_machine.js"></script>
+	  <script type="text/javascript" src="/js/jquery341.min.js"></script>
+
+	  
+</body>
+
+</html>

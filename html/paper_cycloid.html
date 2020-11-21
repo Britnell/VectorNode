@@ -1,0 +1,50 @@
+
+<html>
+
+<head>
+    <title>Mechanical Drawing Machine</title>
+    		<meta charset="UTF-8">
+			<script type="text/javascript" src="/js/paper-full.js"></script>
+
+	<style>
+		
+		#papercanvas {
+			width: calc(100% - 0px);
+			height: calc(100vh - 0px);
+			padding: 0px;
+		}
+
+		#plack {
+			max-width: 800px;
+			margin-left: 10%;
+		}
+
+	</style>
+</head>
+
+<body>
+      
+	  <canvas id="papercanvas" resize ></canvas>
+	  <div id="plack">
+		<p>Hit 'Space' to pause and continue. 
+			Click and drag the gears and their centers to change them. 
+			Click and drag horizontally on the text boxes to edit their variables.
+			Hit 'X' or 'C' to clear the drawing ; 'H' hides the interface
+		</p>  
+		<p>This is a digital implementation of the 
+			  <a href="https://www.kickstarter.com/projects/1765367532/cycloid-drawing-machine">Cycloid Drawing Machine</a>. 
+			  The machines is absolute genious and this is not a substitute, still I really wanted to explore the generative 
+			  patterns and process behind it. The advantage here is you have unlimited gear wheels and no limitations for 
+			  their axes & origins.</p>
+		<p>Right-click to save image or <input type="button" value="Download as SVG" id="export-button"></p>
+	  </div>
+	  
+	  
+	  
+	  <script type="text/javascript" src="/js/paper_cycloid.js"></script>
+	  <script type="text/javascript" src="/js/jquery341.min.js"></script>
+
+	  
+</body>
+
+</html>

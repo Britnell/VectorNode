@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inkscape</title>
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+	<script type="text/javascript" src="/js/paper-full.js"></script>
+	<style>
+		
+		#papercanvas {
+			width: calc(100% - 0px);
+			height: calc(100vh - 0px);
+			padding: 0px;
+		}
+
+		#hiddencontainer {
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>	
+	<div id="uploadcontainer">
+		<input id="upload" type="file" />
+	  </div>
+  <div id="canvascontainer"><canvas id="papercanvas" resize ></canvas>
+	</div>
+  <div id="hiddencontainer"><img id="frame" height="500"/>
+	</div>
+  <script type="text/javascript" src="/js/image_drag.js"></script>
+</body>
+</html>

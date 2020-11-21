@@ -1,0 +1,49 @@
+
+<html>
+
+<head>
+    <title>Concentric</title>
+    		<meta charset="UTF-8">
+			<script type="text/javascript" src="/js/paper-full.js"></script>
+			<!-- <script src="../js/hammer.js"></script> -->
+
+
+	<style>
+		
+		#papercanvas {
+			width: calc(100% - 10px);
+			height: calc(100vh - 10px);
+			/*padding: 6px;*/
+		}
+
+	</style>
+</head>
+
+<body>
+      
+    <script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+  </script>
+
+      <canvas id="papercanvas" resize ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+      <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+      <p>Drag and drop an image</p>
+      
+      <script type="text/javascript" src="/js/image_drop.js"></script>
+
+</body>
+
+</html>
