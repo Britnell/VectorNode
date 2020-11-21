@@ -28,7 +28,7 @@ app.use('/html', express.static('html'));
 app.use('/js', express.static('js'));
 app.use('/static', express.static('static'));
 app.use('/letters', express.static('letters'));
-app.use('/src', express.static('src'));
+app.use('/cdt2d', express.static('cdt2d'));
 
 console.log(`App is runnign port :8000 `);
 app.listen(8000);
