@@ -376,11 +376,13 @@ window.onload = function() {
 	}
 
 	tool.onMouseDown = function(event){
-		click = {};
-		marker_click(event.point);
-		cog_click(cogA, event.point);
-		cog_click(cogB, event.point);
-		widget_click(event.point);
+		if(click.type!='rewind'){
+			click = {};
+			marker_click(event.point);
+			cog_click(cogA, event.point);
+			cog_click(cogB, event.point);
+			widget_click(event.point);
+		}
 	}
 
 	tool.onMouseDrag = function(event){
@@ -402,6 +404,9 @@ window.onload = function() {
 			else 
 				widget_drag(click.target,event);
 		}
+		else if(click.type=='rewind'){
+			rewind_path(event);
+		}
 	}
 
 	tool.onMouseUp = function(event){
@@ -414,17 +419,42 @@ window.onload = function() {
 		// }
 	}
 
+	var rewinding = false;
+	var rewindVal, rewindCopy, lastRewind = 0;
+
+	function rewind_path(event){	// rr
+		if(art.visible)		art.visible = false;
+
+		let delta = event.point.subtract(event.lastPoint);
+		if(Math.abs(delta.x)>Math.abs(delta.y))
+			rewindVal += delta.x*2;
+		else 
+			rewindVal -= (delta.y)/5;
+
+
+		if(rewindVal<0)		rewindVal = 0;
+		else if(rewindVal>=art.segments.length)		rewindVal =art.segments.length;
+		
+		let round = Math.floor(rewindVal);
+		if(round!=lastRewind){
+			console.log(rewindVal)
+			lastRewind = round;
+			//
+			if(rewindCopy) 				rewindCopy.removeSegments();
+			rewindCopy = art.clone();
+			rewindCopy.removeSegments(round);
+			rewindCopy.visible = true;
+		}
+
+		
+	}
+
 	tool.onKeyDown = function(event){
 		if(event.key=='space'){
 			// reset
-			if(stop)
-				stop = false;
-			else {
-				stop = true;
-			}
-		}
-		else if(event.key=='r'){
-			reset();
+			if(stop)			stop = false;
+			else 				stop = true;
+			
 		}
 		else if(event.key=='c' || event.key=='x'){
 			art.removeSegments();
@@ -435,6 +465,23 @@ window.onload = function() {
 				mechanicsLayer.visible = false;
 			else 	
 				mechanicsLayer.visible = true;
+		}
+		else if(event.key=='r'){
+			console.log(' rewinding');
+			if(!rewinding){
+				rewinding = true;
+				click = { type: 'rewind' }
+				stop = true;
+				rewindVal = art.segments.length;
+				mechanicsLayer.visible = false;
+			}
+			else {
+				rewinding = false;
+				click = {};
+				mechanicsLayer.visible = true;
+				art.visible = true;
+				if(rewindCopy) 				rewindCopy.removeSegments();
+			}
 		}
 		return false;
 	}

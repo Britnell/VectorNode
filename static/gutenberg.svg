@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg19"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="gutenberg.svg">
+  <defs
+     id="defs13">
+    <rect
+       x="9.827381"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect23" />
+    <rect
+       x="9.827381"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect68" />
+    <rect
+       x="9.827381"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect74" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect74-0" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1013" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect74-0-9" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1042" />
+    <rect
+       x="9.827381"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1230" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1230-7" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1241" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1230-2" />
+    <rect
+       x="9.8273811"
+       y="10.205357"
+       width="191.25595"
+       height="112.6369"
+       id="rect1323" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="354.89044"
+     inkscape:cy="506.63239"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1574"
+     inkscape:window-height="942"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 95.339132,74.167099 20.187808,9.47724 12.07374,-6.101783 V 92.14788 l -11.68426,-2.271934 v 29.470304 q 0,7.14038 0.84386,9.67197 1.10351,3.31054 4.60879,7.65968 5.6474,7.2053 5.6474,10.32111 0,3.1158 -2.98598,5.97195 -2.92107,2.85616 -15.70884,8.82811 -4.34915,-1.5579 -8.30881,-2.33685 -3.959669,-0.71404 -7.529858,-0.71404 -8.568463,0 -19.798336,3.05089 l -0.908778,-2.20703 15.31937,-17.91587 -15.31937,-11.03513 V 83.644339 q 12.85269,-2.726333 23.563264,-9.47724 z m 7.400028,15.579016 -17.78604,-6.101776 v 42.517731 l 9.671973,7.01055 8.114067,-9.73688 z M 83.20048,150.0499 q 8.438639,-1.36317 13.631645,-1.36317 4.673705,0 9.412315,1.23334 4.80353,1.23334 9.67198,3.76493 l 2.66141,-1.68773 q -8.7632,-8.17898 -11.879,-13.24216 -3.1158,-5.06319 -3.95967,-11.03514 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Old English Text MT';-inkscape-font-specification:'Old English Text MT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       id="path1344" />
+  </g>
+</svg>

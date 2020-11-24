@@ -1,81 +1,32 @@
 
 paper.install(window);
 
+var intersect;
+
 window.onload = function() {
 	// * Setup
 	paper.setup('papercanvas');
 	var tool = new Tool();
 
 
-	
+	var bound = new Path.Circle({
+		center: view.center,
+		radius: 1,
+		strokeColor: 'blue'
+	})
+
+	var shp = new Path({
+		strokeColor: 'black'
+	})
+	shp.add([-30,30],[0,0],[30,30],[30,-30]);
+
 	function main(){
-
-		let p = view.center;
-		let lineL = 50;
-
-		elem = new Path.Arc({
-			strokeWidth: 0,
-			// strokeColor: new Color(0.1, 0.4, 0.8),
-			fillColor: 'black',
-			from: [p.x+lineL, p.y ],
-			through: [p.x, p.y-lineL ],
-			to: [p.x, p.y+lineL ]
+		bound.fitBounds(view.size);
+		
+		intersect = new Group({
+			fillColor: 'green',
+			strokeColor: null
 		});
-		elem.add(p)
-
-		// elem.lastSegment.selected = true;	
-
-		let squ = new Path();
-		squ.add([100,100]);
-		squ.add([50,200]);
-		squ.add([100,300]);
-		squ.add([150,200]);
-		squ.add([100,100]);
-		squ.strokeColor = 'black';
-		let G = new Group();
-		G.addChild(squ);
-
-		let loc = squ.getLocationOf( squ.segments[squ.segments.length-2].point );
-		let spl = squ.splitAt(loc);
-		spl.strokeColor = 'red';
-		spl.position.x += 100;
-		squ.strokeColor = 'blue';
-
-		let line = new Path.Line({
-			from: [100,100],
-			to: [300,100],
-			strokeWidth: 10,
-			strokeColor: 'blue'
-		});
-
-		let circ = new Path.Circle({
-			center: [200,100],
-			radius: 80,
-			strokeWidth: 10,
-			strokeColor: 'black'
-		});
-
-		let unite = line.unite(circ);
-		unite.position.y += 200;
-		unite.position.x += 0*220;
-		
-		let sect = line.intersect(circ,{trace: false});	
-		// let sect = circ.intersect(line,{trace: false});
-		sect.position.y += 200;
-		sect.position.x += 1*220;
-		
-		let sub = line.subtract(circ,{trace:false});
-		sub.position.y += 200;
-		sub.position.x += 2*220;
-
-		let excl = line.exclude(circ,{trace:false});
-		excl.position.y += 200;
-		excl.position.x += 3*220;
-		
-		let dvd = circ.divide(line,{trace:false});
-		dvd.position.y += 2*200;
-		dvd.position.x += 0*220;
-		
 
 	}
 	main();
@@ -84,8 +35,17 @@ window.onload = function() {
 		//
 	}
 
+
+
 	tool.onMouseDown = function(event){
 		//
+		shp.position = event.point;
+
+		let int = shp.subtract(bound,{trace: true});
+		int.strokeColor = 'red';
+		console.log(' i: ', int );
+		// intersect.addChild(int);
+		// console.log(' i ', intersect.area );
 	}
 
 	

@@ -95,6 +95,7 @@ window.onload = function() {
 				let c = trig[i];
 				path.add(cdt.points[c]);
 			}
+			path.scale(2);
 
 		})
 	}
